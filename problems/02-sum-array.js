@@ -11,7 +11,14 @@ sumArray([1, 2, 3, 4, 5]); // 15
 ***********************************************************************/
 
 // your code here
-  
+const sumArray = arr => {
+  if (arr.length < 1) {
+    return 0;
+  }
+
+  return arr.pop() + sumArray(arr)
+}
+
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
   module.exports = sumArray;
