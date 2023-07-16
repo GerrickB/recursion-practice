@@ -13,7 +13,7 @@ sumToN(-8)  // returns null
 
 // your code here
 const sumToN = num => {
-  if (num < 0) {
+  if (num === 0) {
     return null;
   }
 

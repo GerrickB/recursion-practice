@@ -12,6 +12,15 @@ range(7, 6); // []
 
 
 // your code here
+// used end - 1 so 5 would not be passed from start + 1 later
+const range = (start, end) => {
+  if (start > end - 1) {
+    return [];
+  }
+
+  return [start, ...range(start + 1, end)]
+
+}
 
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/

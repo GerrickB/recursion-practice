@@ -15,6 +15,7 @@ iceCreamShop([], 'honey lavender'); // false
 
 // your code here
 const iceCreamShop = (flavors, favorite) => {
+  //base case
   if (flavors.length === 0) {
     return false;
   }
