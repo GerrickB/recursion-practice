@@ -11,6 +11,17 @@ isSorted([5, 4, 3, 2, 1]); // false
 ***********************************************************************/
 
 // your code here
+const isSorted = arr => {
+  if (arr.length === 1) {
+    return true;
+  }
+
+  if (arr.shift() < arr[0]) {
+    return isSorted(arr);
+  } else {
+    return false;
+  }
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {

@@ -12,15 +12,25 @@ sumToN(-8)  // returns null
 ***********************************************************************/
 
 // your code here
-const sumToN = num => {
-  if (num === 0) {
+// const sumToN = num => {
+//   if (num === 0) {
+//     return null;
+//   }
+
+//   return num + sumToN(num - 1);
+// }
+
+const sumToN = (num, total = 0) => {
+  if (num < 0) {
     return null;
   }
 
-  return num + sumToN(num - 1);
+  if (num === 0) {
+    return total;
+  }
 
+  return sumToN(num - 1, total + num);
 }
-
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
   module.exports = sumToN;

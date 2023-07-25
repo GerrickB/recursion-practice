@@ -23,6 +23,26 @@ sort([]); // []
 
 function sort(nums, sorted = []) {
   // your code here
+  // can't use nums === [] to check if empty
+  // console.log(nums.length)
+  // console.log(sorted)
+  if (nums.length === 0) {
+    return sorted;
+  }
+
+  let smallest = nums[0]
+  let smallestIndex = 0;
+  for (let i = 1; i < nums.length; i++) {
+    if (smallest > nums[i]) {
+      smallest = nums[i];
+      smallestIndex = i;
+    }
+  }
+  sorted.push(smallest);
+  nums.splice(smallestIndex, 1);
+
+  return sort(nums, sorted);
+
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/

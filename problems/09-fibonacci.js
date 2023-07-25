@@ -20,11 +20,18 @@ fibonacci(10); // 55
 ***********************************************************************/
 
 // your code here
-  
+// n - 1 just use as countdown to 0
+const fibonacci = num => {
+  if (num === 1 || num === 2) {
+    return 1;
+  }
+
+  return fibonacci(num - 1) + fibonacci(num - 2)
+}
+
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
   module.exports = fibonacci;
 } catch (e) {
   module.exports = null;
 }
-  
